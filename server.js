@@ -14,11 +14,11 @@ app.use(cors());
 app.use(express.text());
 app.use(express.json());
 
-// Log environment variables (excluding sensitive data)
+
 console.log('Server starting with Client ID:', process.env.VITE_TWITCH_CLIENT_ID ? 'Present' : 'Missing');
 console.log('Server starting with Access Token:', process.env.VITE_TWITCH_ACCESS_TOKEN ? 'Present' : 'Missing');
 
-// Create IGDB API instance
+
 const createIgdbApi = (token) => axios.create({
     baseURL: 'https://api.igdb.com/v4',
     headers: {
@@ -31,7 +31,7 @@ const createIgdbApi = (token) => axios.create({
 
 let igdbApi = createIgdbApi(process.env.VITE_TWITCH_ACCESS_TOKEN);
 
-// Test the IGDB connection and refresh token if needed
+
 const testApiConnection = async () => {
     try {
         const response = await igdbApi.post('/games', 'fields name; limit 1;');
@@ -51,7 +51,7 @@ const testApiConnection = async () => {
     }
 };
 
-// Token refresh function
+// Token refresh function hehe
 const refreshToken = async () => {
     try {
         const response = await axios.post(
