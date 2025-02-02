@@ -1,11 +1,9 @@
 # Game Search App 🎮
 
-[Live Here](https://your-deployed-url-here.vercel.app)
+[Live Here](https://gameurge.vercel.app)
 
 A modern, interactive game search application that lets users discover and explore video games using the IGDB API. Features a beautiful UI with gaming-themed animations and real-time search capabilities.
-
-![Game Search App Screenshot](screenshot-url-here) 
-
+ 
 ## ✨ Features
 
 - **Advanced Game Search**: Search through a vast database of video games with real-time results
