@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeftIcon, PlayIcon } from '@heroicons/react/24/outline';
 import { getGameDetails } from '../config/igdb';
+import StoreButtons from '../components/StoreButtons';
 
 const GameDetails = () => {
   const { id } = useParams();
@@ -141,6 +142,8 @@ const GameDetails = () => {
               <p className="text-sm mt-1">User Rating</p>
             </div>
           )}
+          
+          <StoreButtons websites={game.websites} />
         </motion.div>
 
         <motion.div

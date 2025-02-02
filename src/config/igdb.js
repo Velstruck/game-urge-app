@@ -77,13 +77,16 @@ export const getGameDetails = async (gameId) => {
                 cover.url,
                 genres.name,
                 platforms.name,
+                platforms.platform_family,
+                platforms.slug,
                 rating,
                 first_release_date,
                 summary,
                 screenshots.url,
                 videos.*,
                 similar_games.name,
-                similar_games.cover.url;
+                similar_games.cover.url,
+                websites.*;
             where id = ${gameId};
         `);
         
